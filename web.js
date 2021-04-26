@@ -27,7 +27,8 @@ const server = http.createServer((request, response) => {
         return response.end();
     });
   } else {
-      response.end('Error 404');
+      response.statusCode = 404;
+      response.end('Error 404: Page Not Found');
   }
 });
 
